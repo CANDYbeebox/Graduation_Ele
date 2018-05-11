@@ -112,4 +112,9 @@ public class LoginControl {
         return "choose";
     }
 
+    @RequestMapping("/control.do")
+    public String control(){
+        return "control";
+    }
+
 }

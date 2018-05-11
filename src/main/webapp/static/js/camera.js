@@ -444,6 +444,7 @@ function chooseShowPic(filename) {
                 FILENAME:filename,
             },
             success: function (data) {
+                // alert(data);
                 if (data == "0") {
                     Picture();
                     writeTxt('showPic.txt','1');

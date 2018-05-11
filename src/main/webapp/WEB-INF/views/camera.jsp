@@ -135,7 +135,6 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="container-fluid" id="cameraView">
@@ -250,7 +249,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         <!-- /.container -->
     </div>
     <!-- /.content-wrapper -->

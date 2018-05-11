@@ -50,6 +50,6 @@ public class ChooseControl {
 
     @RequestMapping("/camera.do")
     public String test(){
-        return "camera";
+        return "camero";
     }
 }
