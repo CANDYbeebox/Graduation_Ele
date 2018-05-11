@@ -485,11 +485,11 @@
         $("#resetPasswordMod").html(data);
     });
 </script>
-<script src="../../static/js/header.js"></script>
-<script src="../../static/oldlib/lib/JQuery.md5.js"></script>
-<script src="../../static/oldlib/lib/codebase/webVideoCtrl.js"></script>
-<script src="../../static/js/camera.js"></script>
-<script src="../../static/js/choose.js"></script>
+<script src="static/js/header.js"></script>
+<script src="static/oldlib/lib/JQuery.md5.js"></script>
+<script src="static/oldlib/lib/codebase/webVideoCtrl.js"></script>
+<script src="static/js/camera.js"></script>
+<script src="static/js/choose.js"></script>
 
 </body>
 </html>
