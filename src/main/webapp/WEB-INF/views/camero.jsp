@@ -222,6 +222,8 @@
                                 <li class="active textli">实时视频</li>
                             </ul>
                             <div id="container" class="bigplugin">
+                                <img src="static/1.png"    width="450" height="300" border="0"/>
+
                                 <div id="divPlugin" class="try"></div>
                             </div>
                             <!--<div ng-include="'views/cameraBig.html'"></div>-->
@@ -245,19 +247,15 @@
                                 <tbody>
                                 <tr bgcolor="#db7093" >
                                     <td>车</td>
-                                    <td id="车">正常</td>
+                                    <td id="车">入侵</td>
                                 </tr>
                                 <tr bgcolor="#90ee90" >
                                     <td>狗</td>
                                     <td id="狗">正常</td>
                                 </tr>
                                 <tr bgcolor="#6495ed" >
-                                    <td>门</td>
-                                    <td id="人">关</td>
-                                </tr>
-                                <tr bgcolor="#fafad2" >
-                                    <td>危险动作</td>
-                                    <td id="危险动作">无</td>
+                                    <td>困人</td>
+                                    <td id="人">无</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -268,7 +266,7 @@
                                 <li class="active textli">报警提示</li>
                             </ul>
                             <div class="imgdiv" id="imgID">
-                                <img id="img_result"   width="450" height="300" border="0"/>
+                                <img src="static/2.png" id="img_result"   width="450" height="300" border="0"/>
                             </div>
                         </div>
 
