@@ -50,6 +50,7 @@ public class ChooseControl {
 
     @RequestMapping("/camera.do")
     public String test(){
+        System.out.println("camero");
         return "camero";
     }
 }
