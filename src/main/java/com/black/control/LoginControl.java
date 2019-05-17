@@ -2,6 +2,7 @@ package com.black.control;
 
 import com.black.common.md5_class;
 import com.black.pojo.UserEntity;
+import com.black.service.Impl.UserFunImpl;
 import com.black.service.UserFun;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

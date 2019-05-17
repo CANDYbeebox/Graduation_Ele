@@ -108,7 +108,8 @@ function resetPassword() {
 }
 //进入camera.jsp
 $(document).ready(function() {
-    $("#detail_table ").click(function (){
+    $("#detail_table").click(function (){
+        alert("detail");
         window.location.href="camera.do";
     })
 })
