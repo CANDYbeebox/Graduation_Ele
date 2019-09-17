@@ -5,8 +5,27 @@
 //     audioElementHovertree.play();
 // })
 //var g_iWndIndex = 0; //可以不用设置这个变量，有窗口参数的接口中，不用传值，开发包会默认使用当前选择窗口
+
+var ip;
+var password;
+
+$(document).ready(function()  {
+    $.ajax({
+        url: "./static/config/cameroIpAndPassword", //json文件位置
+        type: "GET", //请求方式为get
+        dataType: "json", //返回数据格式为json
+        success: function(data) { //请求成功完成后要执行的方法
+            console.log(data);
+            ip = data.ip;
+            password = data.password;
+        },
+        error : function (data) {
+            alert("fail");
+        }
+    })
+});
+
 function cameraInit(win_width,win_height){
-    // alert("111");
     if (-1 == WebVideoCtrl.I_CheckPluginInstall()) {
         alert("您还未安装过插件，双击开发包目录里的WebComponents.exe安装！");
         return;
@@ -77,11 +96,10 @@ function getWindowSize() {
 }
 // 登录
 function autoLogin() {
-    var szIP = "192.168.254.10",
+    var szIP = ip,
         szPort = "80",
         szUsername = "admin",
-        szPassword = "wubumihuo1992";
-        // szPassword = "wxtjy123";
+        szPassword = password;
 
 
     var iRet = WebVideoCtrl.I_Login(szIP, 1, szPort, szUsername, szPassword, {
@@ -403,21 +421,21 @@ function bikedogpeople() {
         success: function(data) {
             // alert(JSON.stringify(data));
             if(data.bike==0)
-                $("#车").html("正常");
+                $("#bike").html("正常");
             else
-                $("#车").html("入侵");
+                $("#bike").html("入侵");
             if(data.dog==0)
-                $("#狗").html("正常");
+                $("#dog").html("正常");
             else
-                $("#狗").html("入侵");
+                $("#dog").html("入侵");
             if(data.door==0)
-                $("#人").html("关");
+                $("#door").html("关");
             else
-                $("#人").html("开");
+                $("#door").html("开");
             if(data.violent==0)
-                $("#危险动作").html("无");
+                $("#violent").html("无");
             else
-                $("#危险动作").html("有");
+                $("#violent").html("有");
         }
     });
 }

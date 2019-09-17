@@ -3,6 +3,7 @@ package com.black.control;
 import com.black.common.txtaction;
 import com.black.pojo.OptionEntity;
 import com.black.service.CameraFun;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,15 +38,9 @@ public class CameraControl {
 
     @RequestMapping("/picture.do")
     public void showPicture(HttpServletResponse response, HttpServletRequest request) throws Exception{
-//        String picId = getRequest().getParameter("picId");
-//        String pic_path = pointCardApplyManager.findPicturePath(picId);
-//        System.out.println(pic_path);
-//        System.out.println(application.getRealPath(""));
         String real=request.getServletContext().getRealPath("");
         System.out.println(real);
-//        FileInputStream is = new FileInputStream(real+"\\static\\11.jpg");
-        FileInputStream is = new FileInputStream(real+"/static/11.jpg");
-//        FileInputStream is = new FileInputStream("11.jpg");
+        FileInputStream is = new FileInputStream(real+"/static/show.jpg");
         int i = is.available(); // 得到文件大小
         byte data[] = new byte[i];
         is.read(data); // 读数据
@@ -58,12 +53,12 @@ public class CameraControl {
 
     @RequestMapping("/readTxt.do")
     public void readTxt(String FILENAME,HttpServletRequest request,HttpServletResponse response){
-        System.out.println(FILENAME);
         String realpath=request.getServletContext().getRealPath("");
+        System.out.println("readTxt realpath " + realpath);
         txtaction testTxt=new txtaction();
         String readdata="";
         readdata=testTxt.readTxtFile(realpath+"/static/"+FILENAME);
-        System.out.println(readdata);
+        System.out.println("readTxt data " + readdata);
         try {
             response.getWriter().print(readdata);
             response.getWriter().close();
@@ -75,11 +70,10 @@ public class CameraControl {
 
     @RequestMapping("/writeTxt.do")
     public void writeTxt(String FILENAME,String CONTENT,HttpServletRequest request){
-        System.out.println(CONTENT);
         String realpath=request.getServletContext().getRealPath("");
+        System.out.println("realpath " + realpath);
         txtaction testTxt=new txtaction();
         testTxt.clearFileContent(realpath+"/static/"+FILENAME);
-//    testTxt.writeFile(realpath,"capturePic.txt","1");
         testTxt.writeFile(realpath+"/static",FILENAME,CONTENT);
     }
 }

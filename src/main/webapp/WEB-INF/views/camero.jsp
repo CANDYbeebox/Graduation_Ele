@@ -151,17 +151,17 @@
             </form>
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu" data-widget="tree">
-                <%--<li class="header" > 电梯信息显示</li>--%>
-                <li>
-                    <a href="choose.do">
-                        <i class="fa fa-fw fa-mail-reply"></i><span>返回选择</span>
-                        <!--<span class="pull-right-container">-->
-                        <!--<small class="label pull-right bg-green">new</small>-->
-                        <!--</span>-->
-                    </a>
-                </li>
-            </ul>
+            <%--<ul class="sidebar-menu" data-widget="tree">--%>
+                <%--&lt;%&ndash;<li class="header" > 电梯信息显示</li>&ndash;%&gt;--%>
+                <%--<li>--%>
+                    <%--<a href="choose.do">--%>
+                        <%--<i class="fa fa-fw fa-mail-reply"></i><span>返回选择</span>--%>
+                        <%--<!--<span class="pull-right-container">-->--%>
+                        <%--<!--<small class="label pull-right bg-green">new</small>-->--%>
+                        <%--<!--</span>-->--%>
+                    <%--</a>--%>
+                <%--</li>--%>
+            <%--</ul>--%>
         </section>
         <!-- /.sidebar -->
     </aside>
@@ -205,14 +205,14 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-7">
+                                <div class="col-md-3">
                                     已登录设备
                                     <select id="ip" class="bigselect"></select>
                                 </div>
-                                <%--<div class="col-md-4">通道列表--%>
-                                <%--<!--<div class="col-md-2">-->--%>
-                                <%--<select id="channels" class="bigselect"></select>--%>
-                                <%--</div>--%>
+                                <div class="col-md-3">通道列表
+                                <!--<div class="col-md-2">-->
+                                <select id="channels" class="bigselect"></select>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -222,7 +222,7 @@
                                 <li class="active textli">实时视频</li>
                             </ul>
                             <div id="container" class="bigplugin">
-                                <img src="static/1.png"    width="450" height="300" border="0"/>
+                                <%--<img src="static/1.png"    width="450" height="300" border="0"/>--%>
 
                                 <div id="divPlugin" class="try"></div>
                             </div>
@@ -247,15 +247,19 @@
                                 <tbody>
                                 <tr bgcolor="#db7093" >
                                     <td>车</td>
-                                    <td id="车">入侵</td>
+                                    <td id="bike">正常</td>
                                 </tr>
                                 <tr bgcolor="#90ee90" >
                                     <td>狗</td>
-                                    <td id="狗">正常</td>
+                                    <td id="dog">正常</td>
                                 </tr>
                                 <tr bgcolor="#6495ed" >
-                                    <td>困人</td>
-                                    <td id="人">无</td>
+                                    <td>门</td>
+                                    <td id="door">关</td>
+                                </tr>
+                                <tr bgcolor="#6495ed" >
+                                    <td>暴力行为</td>
+                                    <td id="violent">无</td>
                                 </tr>
                                 </tbody>
                             </table>

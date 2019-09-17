@@ -8,12 +8,9 @@ import java.io.*;
 public class txtaction {
 
     public void writeFile(String dir,String filename,String content) {
-//        String txtFileName = "1.txt";
         String txtFileName = filename;
         String directoryPath = dir;
-//        String directoryPath = "";
         try {
-//            directoryPath = WebplusContext.getRealPath("/apps/schoolfellow/upload/smsRecord");
             directoryPath=dir;
             File directory = new File(directoryPath);
             if (!directory.exists()) {
@@ -27,7 +24,6 @@ public class txtaction {
             out.close();
             System.out.println("将结果写入文件成功！");
         } catch (Exception ex) {
-//            log.error("将结果写入文件失败！", ex);
             System.out.println("将结果写入文件失败！");
         }
     }
